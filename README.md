@@ -1,1 +1,1 @@
-# Duolingo_AI nhóm 8
+# Duolingo_AI
