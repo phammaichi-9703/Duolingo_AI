@@ -2,4 +2,31 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Duo Branding -->
+    <color name="duo_green">#58CC02</color>
+    <color name="duo_green_dark">#46A302</color>
+    <color name="duo_blue">#1CB0F6</color>
+    <color name="duo_orange">#FF9600</color>
+    <color name="duo_red">#FF4B4B</color>
+    <color name="duo_yellow">#FFC800</color>
+
+    <!-- Compatibility aliases for older layouts -->
+    <color name="background_light">#FFFFFF</color>
+    <color name="blue_primary">#1CB0F6</color>
+    <color name="red_primary">#FF4B4B</color>
+
+    <!-- Light Theme -->
+    <color name="bg_light">#FFFFFF</color>
+    <color name="surface_light">#F7F7F7</color>
+    <color name="text_primary_light">#4B4B4B</color>
+    <color name="text_secondary_light">#777777</color>
+    <color name="border_light">#E5E5E5</color>
+
+    <!-- Dark Theme (High Contrast) -->
+    <color name="bg_dark">#131F24</color>
+    <color name="surface_dark">#1B2D35</color>
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#AFBABD</color>
+    <color name="border_dark">#37464F</color>
 </resources>
