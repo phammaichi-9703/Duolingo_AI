@@ -1,8 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.BTL" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Main background color -->
+        <item name="android:windowBackground">@color/background_light</item>
+        <!-- Primary text color -->
+        <item name="android:textColorPrimary">@color/text_primary_light</item>
+        <!-- Secondary text color -->
+        <item name="android:textColorSecondary">@color/text_secondary_light</item>
+        <!-- Card surface color -->
+        <item name="colorSurface">@color/card_background_light</item>
+        <!-- Stroke color -->
+        <item name="colorOutline">@color/stroke_light</item>
     </style>
 
     <style name="Theme.BTL" parent="Base.Theme.BTL" />

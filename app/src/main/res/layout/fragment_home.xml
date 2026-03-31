@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F6F7FB">
+    android:layout_height="match_parent">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/headerCard"
@@ -16,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="#E6E8F0"
+        app:strokeColor="?colorOutline"
         app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,7 +52,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
                         android:text="7"
-                        android:textColor="#111827"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="16sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -78,7 +77,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
                         android:text="5"
-                        android:textColor="#111827"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="16sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -114,7 +113,7 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:text="1250 XP"
-                        android:textColor="#111827"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="15sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -141,7 +140,7 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:text="1 Lessons"
-                        android:textColor="#111827"
+                        android:textColor="?android:textColorPrimary"
                         android:textSize="15sp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -156,7 +155,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:text="Learn English"
-        android:textColor="#111827"
+        android:textColor="?android:textColorPrimary"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -171,7 +170,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:text="Continue your language learning journey"
-        android:textColor="#6B7280"
+        android:textColor="?android:textColorSecondary"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
