@@ -12,8 +12,10 @@ public class User {
     public int totalXp;
     public int streak;
     public int lessonsDone;
-    public String avatarUri; // Changed to Uri for simplicity with image picker
+    public String avatarUri;
     public int level;
+    public String lastLessonDate; // Format: yyyy-MM-dd
+    public String wrongAnswers; // JSON string of wrong questions for review
 
     public User(String username, String password) {
         this.username = username;
@@ -22,10 +24,7 @@ public class User {
         this.streak = 0;
         this.lessonsDone = 0;
         this.level = 1;
-    }
-
-    public int calculateLevel() {
-        // Simple level logic: every 100 XP is a level
-        return (totalXp / 100) + 1;
+        this.lastLessonDate = "";
+        this.wrongAnswers = "[]";
     }
 }
