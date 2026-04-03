@@ -9,7 +9,7 @@ import java.util.List;
 @Dao
 public interface UserDao {
     @Insert
-    void insert(User user);
+    long insert(User user);
 
     @Update
     void update(User user);
@@ -22,4 +22,7 @@ public interface UserDao {
 
     @Query("SELECT * FROM users WHERE id = :id")
     User getUserById(int id);
+
+    @Query("UPDATE users SET totalXp = totalXp + :xp, lessonsDone = lessonsDone + 1 WHERE username = :username")
+    void updateProgress(String username, int xp);
 }

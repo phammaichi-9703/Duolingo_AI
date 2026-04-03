@@ -28,15 +28,21 @@ public class RankingFragment extends Fragment {
         RecyclerView rvRanking = view.findViewById(R.id.rvRanking);
         rvRanking.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        List<User> users = userDao.getAllUsersByXp();
-        List<RankAdapter.RankItem> rankList = new ArrayList<>();
-        
-        for (User u : users) {
-            rankList.add(new RankAdapter.RankItem(u.username, u.totalXp));
-        }
-
-        rvRanking.setAdapter(new RankAdapter(rankList));
+        loadRanking(rvRanking);
 
         return view;
+    }
+
+    private void loadRanking(RecyclerView rv) {
+        AppDatabase.databaseWriteExecutor.execute(() -> {
+            List<User> users = userDao.getAllUsersByXp();
+            List<RankAdapter.RankItem> rankList = new ArrayList<>();
+            for (User u : users) {
+                rankList.add(new RankAdapter.RankItem(u.username, u.totalXp));
+            }
+            if (isAdded()) {
+                requireActivity().runOnUiThread(() -> rv.setAdapter(new RankAdapter(rankList)));
+            }
+        });
     }
 }

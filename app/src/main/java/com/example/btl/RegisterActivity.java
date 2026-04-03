@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.btl.model.AppDatabase;
 import com.example.btl.model.User;
 import com.example.btl.model.UserDao;
+import com.example.btl.utils.SecurityUtils;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -34,19 +35,25 @@ public class RegisterActivity extends AppCompatActivity {
             String password = etRegPassword.getText().toString().trim();
 
             if (username.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            if (userDao.getUserByUsername(username) != null) {
-                Toast.makeText(this, "Username already exists", Toast.LENGTH_SHORT).show();
-                return;
-            }
+            AppDatabase.databaseWriteExecutor.execute(() -> {
+                if (userDao.getUserByUsername(username) != null) {
+                    runOnUiThread(() -> Toast.makeText(this, "Tên đăng nhập đã tồn tại", Toast.LENGTH_SHORT).show());
+                    return;
+                }
 
-            User newUser = new User(username, password);
-            userDao.insert(newUser);
-            Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show();
-            finish();
+                String hashedPassword = SecurityUtils.hashPassword(password);
+                User newUser = new User(username, hashedPassword);
+                userDao.insert(newUser);
+                
+                runOnUiThread(() -> {
+                    Toast.makeText(this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                    finish();
+                });
+            });
         });
 
         btnBackToLogin.setOnClickListener(v -> finish());
