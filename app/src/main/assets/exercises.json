@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "Hello, how are you?",
+    "options": "Xin chào|tôi|bạn|khỏe|không?|cảm ơn",
+    "answer": "Xin chào bạn khỏe không?"
+  },
+  {
+    "id": 2,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "This is my mother",
+    "options": "Đây|là|mẹ|của|tôi|bố",
+    "answer": "Đây là mẹ của tôi"
+  }
+]
