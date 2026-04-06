@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "BTL"
 include(":app")
- 
+include(":BTN_Duolingo")
