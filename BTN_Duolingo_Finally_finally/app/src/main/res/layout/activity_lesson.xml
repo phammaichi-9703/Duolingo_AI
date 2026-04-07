@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:padding="16dp">
+
+    <!-- Top Bar -->
+    <ImageButton
+        android:id="@+id/btnCloseLesson"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/textColorSecondary" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/lessonProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:progress="0"
+        app:indicatorColor="@color/duolingo_green"
+        app:trackColor="@color/dividerColor"
+        app:trackCornerRadius="8dp"
+        app:trackThickness="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnCloseLesson"
+        app:layout_constraintEnd_toStartOf="@id/tvProgress"
+        app:layout_constraintStart_toEndOf="@id/btnCloseLesson"
+        app:layout_constraintTop_toTopOf="@id/btnCloseLesson" />
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 / 10"
+        android:textColor="@color/textColorSecondary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/lessonProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/lessonProgress" />
+
+    <!-- Question Section -->
+    <TextView
+        android:id="@+id/tvQuestionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Translate this sentence"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCloseLesson" />
+
+    <LinearLayout
+        android:id="@+id/sentenceContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestionTitle">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@android:drawable/ic_btn_speak_now"
+            app:tint="@color/duolingo_green" />
+
+        <TextView
+            android:id="@+id/tvSentenceToTranslate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/bg_speech_bubble"
+            android:padding="12dp"
+            android:text="Hello, how are you?"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Answer Area (Where chips go when clicked) -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:minHeight="60dp"
+        android:background="@color/surfaceColor"
+        android:padding="8dp"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="8dp"
+        app:layout_constraintTop_toBottomOf="@id/sentenceContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/dividerColor"
+        app:layout_constraintTop_toBottomOf="@id/chipGroupAnswer" />
+
+    <!-- Options Section -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:chipSpacingHorizontal="8dp"
+        app:chipSpacingVertical="8dp"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!-- Chips will be added programmatically -->
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Result Feedback (Hidden by default) -->
+    <TextView
+        android:id="@+id/tvFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnCheckAnswer" />
+
+    <!-- Bottom Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCheckAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/duolingo_green"
+        android:text="CHECK"
+        android:textSize="18sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

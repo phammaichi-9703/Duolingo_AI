@@ -1,0 +1,22 @@
+[
+  {
+    "username": "nguyena",
+    "password": "pass123",
+    "fullName": "Nguyen Van A",
+    "dob": "01/01/1990",
+    "address": "Hanoi",
+    "phone": "0987654321",
+    "xp": 100,
+    "streak": 5
+  },
+  {
+    "username": "lethib",
+    "password": "pass123",
+    "fullName": "Le Thi B",
+    "dob": "05/05/1995",
+    "address": "HCM City",
+    "phone": "0912345678",
+    "xp": 250,
+    "streak": 10
+  }
+]
