@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "Hello, how are you?",
+    "options": "Xin chào|tôi|bạn|khỏe|không?|cảm ơn",
+    "answer": "Xin chào bạn khỏe không?"
+  },
+  {
+    "id": 2,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "Goodbye, see you later.",
+    "options": "Tạm biệt|hẹn|gặp|lại|sau|xin chào|tôi",
+    "answer": "Tạm biệt hẹn gặp lại sau"
+  },
+  {
+    "id": 3,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "Thank you very much.",
+    "options": "Cảm ơn|bạn|rất|nhiều|không|có|chi",
+    "answer": "Cảm ơn bạn rất nhiều"
+  },
+  {
+    "id": 4,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "What is your name?",
+    "options": "Tên|của|bạn|là|gì?|tôi|là",
+    "answer": "Tên của bạn là gì?"
+  },
+  {
+    "id": 5,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "My name is Nam.",
+    "options": "Tên|của|tôi|là|Nam|bạn|là",
+    "answer": "Tên của tôi là Nam"
+  },
+  {
+    "id": 6,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "Nice to meet you.",
+    "options": "Rất|vui|được|gặp|bạn|không|sao",
+    "answer": "Rất vui được gặp bạn"
+  },
+  {
+    "id": 7,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "Where are you from?",
+    "options": "Bạn|đến|từ|đâu?|ở|đây|là",
+    "answer": "Bạn đến từ đâu?"
+  },
+  {
+    "id": 8,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "I am from Vietnam.",
+    "options": "Tôi|đến|từ|Việt Nam|ở|Lào|Campuchia",
+    "answer": "Tôi đến từ Việt Nam"
+  },
+  {
+    "id": 9,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "How old are you?",
+    "options": "Bạn|bao|nhiêu|tuổi?|năm|nay|là",
+    "answer": "Bạn bao nhiêu tuổi?"
+  },
+  {
+    "id": 10,
+    "title": "Lesson 1: Basics",
+    "description": "Learn basic greetings",
+    "question": "I am twenty years old.",
+    "options": "Tôi|hai|mươi|tuổi|mười|lăm|năm",
+    "answer": "Tôi hai mươi tuổi"
+  },
+  {
+    "id": 11,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "This is my mother",
+    "options": "Đây|là|mẹ|của|tôi|bố|anh",
+    "answer": "Đây là mẹ của tôi"
+  },
+  {
+    "id": 12,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "This is my father",
+    "options": "Đây|là|bố|của|tôi|mẹ|em",
+    "answer": "Đây là bố của tôi"
+  },
+  {
+    "id": 13,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "I have one brother",
+    "options": "Tôi|có|một|người|anh trai|chị gái|em",
+    "answer": "Tôi có một người anh trai"
+  },
+  {
+    "id": 14,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "She is my sister",
+    "options": "Cô ấy|là|chị gái|của|tôi|anh trai|em",
+    "answer": "Cô ấy là chị gái của tôi"
+  },
+  {
+    "id": 15,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "My family is happy",
+    "options": "Gia đình|của|tôi|hạnh phúc|rất|buồn|vui",
+    "answer": "Gia đình của tôi hạnh phúc"
+  },
+  {
+    "id": 16,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "How many people are there in your family?",
+    "options": "Có|bao|nhiêu|người|trong|gia đình|bạn?|nhà",
+    "answer": "Có bao nhiêu người trong gia đình bạn?"
+  },
+  {
+    "id": 17,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "There are four people",
+    "options": "Có|bốn|người|trong|nhà|tôi|năm|ba",
+    "answer": "Có bốn người"
+  },
+  {
+    "id": 18,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "My grandfather is old",
+    "options": "Ông nội|của|tôi|đã|già|trẻ|rất",
+    "answer": "Ông nội của tôi đã già"
+  },
+  {
+    "id": 19,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "My grandmother is kind",
+    "options": "Bà nội|của|tôi|thật|tử tế|khó tính|vui",
+    "answer": "Bà nội của tôi thật tử tế"
+  },
+  {
+    "id": 20,
+    "title": "Lesson 2: Family",
+    "description": "Names of family members",
+    "question": "I love my parents",
+    "options": "Tôi|yêu|bố mẹ|của|tôi|ghét|ông bà",
+    "answer": "Tôi yêu bố mẹ tôi"
+  },
+  {
+    "id": 21,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "I like to eat rice.",
+    "options": "Tôi|thích|ăn|cơm|phở|bánh mì|uống",
+    "answer": "Tôi thích ăn cơm"
+  },
+  {
+    "id": 22,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "I am drinking water.",
+    "options": "Tôi|đang|uống|nước|sữa|trà|ăn",
+    "answer": "Tôi đang uống nước"
+  },
+  {
+    "id": 23,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "The apple is red.",
+    "options": "Quả táo|có|màu|đỏ|xanh|vàng|là",
+    "answer": "Quả táo màu đỏ"
+  },
+  {
+    "id": 24,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "Bread is delicious.",
+    "options": "Bánh mì|rất|ngon|dở|thơm|cay|quá",
+    "answer": "Bánh mì rất ngon"
+  },
+  {
+    "id": 25,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "Do you want coffee?",
+    "options": "Bạn|có|muốn|uống|cà phê|không?|trà|thích",
+    "answer": "Bạn có muốn uống cà phê không?"
+  },
+  {
+    "id": 26,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "I eat breakfast at 7 AM.",
+    "options": "Tôi|ăn|sáng|lúc|bảy|giờ|tám|tối",
+    "answer": "Tôi ăn sáng lúc bảy giờ"
+  },
+  {
+    "id": 27,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "Chicken is my favorite food.",
+    "options": "Thịt gà|là|món|yêu thích|của|tôi|vịt|cá",
+    "answer": "Thịt gà là món yêu thích của tôi"
+  },
+  {
+    "id": 28,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "Milk is good for health.",
+    "options": "Sữa|tốt|cho|sức khỏe|rất|không|bé",
+    "answer": "Sữa tốt cho sức khỏe"
+  },
+  {
+    "id": 29,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "Would you like some tea?",
+    "options": "Bạn|muốn|dùng|chút|trà|không?|nước|mời",
+    "answer": "Bạn muốn dùng chút trà không?"
+  },
+  {
+    "id": 30,
+    "title": "Lesson 3: Food",
+    "description": "Common food and drinks",
+    "question": "I am hungry.",
+    "options": "Tôi|đang|đói|bụng|quá|khát|mệt",
+    "answer": "Tôi đang đói bụng"
+  },
+  {
+    "id": 31,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "The dog is barking.",
+    "options": "Con chó|đang|sủa|kêu|chạy|mèo|gà",
+    "answer": "Con chó đang sủa"
+  },
+  {
+    "id": 32,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "I love cats.",
+    "options": "Tôi|rất|yêu|mèo|chó|thỏ|ghét",
+    "answer": "Tôi rất yêu mèo"
+  },
+  {
+    "id": 33,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "The elephant is very big.",
+    "options": "Con voi|rất|to|lớn|nhỏ|cao|bé",
+    "answer": "Con voi rất to lớn"
+  },
+  {
+    "id": 34,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "Birds can fly.",
+    "options": "Chim|có thể|bay|chạy|nhảy|bơi|không",
+    "answer": "Chim có thể bay"
+  },
+  {
+    "id": 35,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "The fish is swimming.",
+    "options": "Con cá|đang|bơi|trong|nước|ao|hồ",
+    "answer": "Con cá đang bơi"
+  },
+  {
+    "id": 36,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "A lion is the king of the forest.",
+    "options": "Sư tử|là|chúa tể|rừng xanh|cọp|báo|vua",
+    "answer": "Sư tử là chúa tể rừng xanh"
+  },
+  {
+    "id": 37,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "Monkey likes bananas.",
+    "options": "Con khỉ|thích|ăn|chuối|táo|cam|nho",
+    "answer": "Con khỉ thích ăn chuối"
+  },
+  {
+    "id": 38,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "The rabbit is fast.",
+    "options": "Con thỏ|chạy|rất|nhanh|chậm|rùa|thú",
+    "answer": "Con thỏ chạy rất nhanh"
+  },
+  {
+    "id": 39,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "I see a butterfly.",
+    "options": "Tôi|thấy|một|con bướm|đẹp|bay|nhìn",
+    "answer": "Tôi thấy một con bướm"
+  },
+  {
+    "id": 40,
+    "title": "Lesson 4: Animals",
+    "description": "Common animal names",
+    "question": "The cow gives milk.",
+    "options": "Con bò|cho|sữa|thịt|cỏ|trâu|dê",
+    "answer": "Con bò cho sữa"
+  },
+  {
+    "id": 41,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "The sky is blue.",
+    "options": "Bầu trời|có|màu|xanh dương|đỏ|vàng|là",
+    "answer": "Bầu trời màu xanh dương"
+  },
+  {
+    "id": 42,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "Grass is green.",
+    "options": "Cỏ|có|màu|xanh lá|nâu|tím|trắng",
+    "answer": "Cỏ màu xanh lá"
+  },
+  {
+    "id": 43,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "The sun is yellow.",
+    "options": "Mặt trời|có|màu|vàng|cam|hồng|rực rỡ",
+    "answer": "Mặt trời màu vàng"
+  },
+  {
+    "id": 44,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "My car is black.",
+    "options": "Xe của tôi|có|màu|đen|trắng|xám|là",
+    "answer": "Xe của tôi màu đen"
+  },
+  {
+    "id": 45,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "Snow is white.",
+    "options": "Tuyết|có|màu|trắng|tinh|lạnh|giá",
+    "answer": "Tuyết màu trắng"
+  },
+  {
+    "id": 46,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "Orange is orange.",
+    "options": "Quả cam|có|màu|da cam|quýt|bưởi|là",
+    "answer": "Quả cam màu da cam"
+  },
+  {
+    "id": 47,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "The flower is pink.",
+    "options": "Bông hoa|có|màu|hồng|thắm|đẹp|quá",
+    "answer": "Bông hoa màu hồng"
+  },
+  {
+    "id": 48,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "Chocolate is brown.",
+    "options": "Sô-cô-la|có|màu|nâu|đen|ngọt|đắng",
+    "answer": "Sô-cô-la màu nâu"
+  },
+  {
+    "id": 49,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "Purple is a beautiful color.",
+    "options": "Màu tím|là|một|màu|đẹp|thủy chung|rất",
+    "answer": "Màu tím là màu đẹp"
+  },
+  {
+    "id": 50,
+    "title": "Lesson 5: Colors",
+    "description": "Basic colors vocabulary",
+    "question": "What is your favorite color?",
+    "options": "Màu sắc|yêu thích|của|bạn|là|gì?|nào",
+    "answer": "Màu sắc yêu thích của bạn là gì?"
+  }
+]

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="duolingo_green">#58CC02</color>
+    <color name="duolingo_blue">#1CB0F6</color>
+    <color name="duolingo_orange">#FF9600</color>
+    <color name="duolingo_red">#FF4B4B</color>
+
+    <!-- Light Theme Semantic Colors -->
+    <color name="backgroundColor">#F7F7F7</color>
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="textColorPrimary">#4B4B4B</color>
+    <color name="textColorSecondary">#777777</color>
+    <color name="dividerColor">#E5E5E5</color>
+    <color name="cardStrokeColor">#E5E5E5</color>
+</resources>

@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\drawable_bg_speech_bubble.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\drawable\\bg_speech_bubble.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_fragment_settings.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\fragment_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.btn_duolingo.app-debug-35:/layout_activity_result.xml.flat",
+        "source": "com.example.btn_duolingo.app-main-37:/layout/activity_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_activity_user_profile.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\activity_user_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_activity_lesson.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\activity_lesson.xml"
+    },
+    {
+        "merged": "com.example.btn_duolingo.app-debug-35:/layout_item_wrong_answer.xml.flat",
+        "source": "com.example.btn_duolingo.app-main-37:/layout/item_wrong_answer.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\layout_item_exercise.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\layout\\item_exercise.xml"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-debug-35:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\mainh\\.gradle\\daemon\\9.2.1\\com.example.btn_duolingo.app-main-37:\\drawable\\ic_launcher_background.xml"
+    }
+]
