@@ -11,6 +11,9 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+}
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -19,10 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BTL"
+rootProject.name = "BTN_Duolingo"
 include(":app")
-include(":BTN_Duolingo")
-include(":BTN_Duolingo")
-include(":BTN_Duolingo_Finally")
-include(":BTN_Duolingo_CuoiCung")
-include(":BTN_Duolingo_Update")
+ 
