@@ -318,7 +318,12 @@ public class LessonActivity extends AppCompatActivity {
 
     private void showResult() {
         if (isFinishing() || isDestroyed()) return;
-        if (wrongExercises.isEmpty() && mAuth.getCurrentUser() != null) mDatabase.child("user_progress").child(mAuth.getUid()).child(lessonTitle).setValue(true);
+        
+        // Luôn lưu tiến trình khi hoàn thành bài học, không cần phải đúng hết 100%
+        if (mAuth.getCurrentUser() != null) {
+            mDatabase.child("user_progress").child(mAuth.getUid()).child(lessonTitle).setValue(true);
+        }
+        
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra("WRONG_EXERCISES", new Gson().toJson(wrongExercises));
         intent.putExtra("TOTAL_QUESTIONS", exerciseList.size());
