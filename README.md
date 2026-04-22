@@ -10,7 +10,7 @@
 ## 🌟 Tính năng nổi bật
 
 * **📚 Bài học đa dạng:** Cung cấp các bài học từ vựng, ngữ pháp và phát âm theo nhiều cấp độ khác nhau.
-* **🤖 Tích hợp AI:** (Mô tả tính năng AI của bạn ở đây, ví dụ: Chấm điểm phát âm bằng AI, gợi ý bài học thông minh, chatbot giao tiếp...).
+* **🤖 Tích hợp AI:** Chấm điểm phát âm bằng AI, gợi ý bài học thông minh, chatbot giao tiếp....
 * **🎮 Trải nghiệm Gamification:** Học tập thông qua các trò chơi tương tác, hệ thống điểm thưởng, cấp độ và chuỗi ngày học (streak).
 * **📈 Theo dõi tiến độ:** Thống kê kết quả học tập để người dùng dễ dàng theo dõi sự tiến bộ của bản thân.
 * **📱 Giao diện thân thiện:** Thiết kế UI/UX dễ sử dụng, trực quan và phù hợp với mọi lứa tuổi.
