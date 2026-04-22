@@ -21,7 +21,7 @@ import java.util.concurrent.Executors;
 
 public class GeminiService {
     private static final String TAG = "GeminiService";
-    private static final String API_KEY = "AIzaSyA3qjf4isgjIWhE9cSeQmM-EZSEyOmqJSo";
+    private static final String API_KEY = "AIzaSyD2qHhl3BgTLH2OtD3FZAGvwkYrdikcI7M";
     private final GenerativeModelFutures model;
     private final Executor executor = Executors.newSingleThreadExecutor();
     
@@ -32,19 +32,13 @@ public class GeminiService {
         void onError(Throwable t);
     }
 
-    public interface SpeechComparisonCallback {
-        void onResult(boolean isGood);
-        void onError(Throwable t);
-    }
-
     public GeminiService() {
         GenerationConfig.Builder configBuilder = new GenerationConfig.Builder();
         configBuilder.temperature = 0.1f;
         GenerationConfig config = configBuilder.build();
         
-        // Sử dụng gemini-1.5-flash là model chuẩn và ổn định nhất
         GenerativeModel gm = new GenerativeModel(
-            "gemini-1.5-flash",
+            "gemini-2.5-pro",
             API_KEY,
             config
         );
@@ -92,38 +86,6 @@ public class GeminiService {
 
             @Override
             public void onFailure(Throwable t) {
-                callback.onError(t);
-            }
-        }, executor);
-    }
-
-    public void compareSpeech(String referenceText, String spokenText, SpeechComparisonCallback callback) {
-        Log.d(TAG, "Comparing spoken text with reference using AI...");
-        String prompt = "Compare these two texts:\n" +
-                "Reference sentence: \"" + referenceText + "\"\n" +
-                "User spoke: \"" + spokenText + "\"\n" +
-                "Task: Determine if the user's spoken text accurately matches the reference sentence (at least 50% match in words or meaning).\n" +
-                "Return 'TRUE' if it is a good match, return 'FALSE' otherwise. Return ONLY the word 'TRUE' or 'FALSE'.";
-
-        Content content = new Content.Builder().addText(prompt).build();
-        ListenableFuture<GenerateContentResponse> response = model.generateContent(content);
-
-        Futures.addCallback(response, new FutureCallback<GenerateContentResponse>() {
-            @Override
-            public void onSuccess(GenerateContentResponse result) {
-                String resultText = result.getText();
-                Log.d(TAG, "AI Comparison Result: " + resultText);
-                if (resultText != null) {
-                    boolean isGood = resultText.trim().toUpperCase().contains("TRUE");
-                    callback.onResult(isGood);
-                } else {
-                    callback.onError(new Exception("Empty response from AI"));
-                }
-            }
-
-            @Override
-            public void onFailure(Throwable t) {
-                Log.e(TAG, "AI Comparison API error", t);
                 callback.onError(t);
             }
         }, executor);

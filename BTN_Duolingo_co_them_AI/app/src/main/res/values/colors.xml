@@ -4,15 +4,23 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="duolingo_green">#58CC02</color>
+    <color name="duolingo_green_dark">#46A302</color>
     <color name="duolingo_blue">#1CB0F6</color>
+    <color name="duolingo_blue_dark">#1899D6</color>
     <color name="duolingo_orange">#FF9600</color>
     <color name="duolingo_red">#FF4B4B</color>
+    <color name="duolingo_gray">#AFAFAF</color>
+    <color name="duolingo_light_gray">#E5E5E5</color>
 
-    <!-- Light Theme Semantic Colors -->
-    <color name="backgroundColor">#F7F7F7</color>
+    <!-- Semantic Colors (Light) -->
+    <color name="backgroundColor">#FFFFFF</color>
     <color name="surfaceColor">#FFFFFF</color>
     <color name="textColorPrimary">#4B4B4B</color>
     <color name="textColorSecondary">#777777</color>
     <color name="dividerColor">#E5E5E5</color>
     <color name="cardStrokeColor">#E5E5E5</color>
+    
+    <!-- Button Colors -->
+    <color name="button_disabled">#E5E5E5</color>
+    <color name="button_disabled_text">#AFAFAF</color>
 </resources>

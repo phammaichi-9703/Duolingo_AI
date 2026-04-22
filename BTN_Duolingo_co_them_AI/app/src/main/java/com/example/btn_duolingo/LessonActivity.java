@@ -21,6 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
@@ -123,8 +124,6 @@ public class LessonActivity extends AppCompatActivity {
                             
                             compareSpeechLocally(recognizedText);
                         }
-                    } else {
-                        Log.e(TAG, "Speech recognition failed or cancelled");
                     }
                 }
         );
@@ -137,21 +136,13 @@ public class LessonActivity extends AppCompatActivity {
         String spokenTextLower = spokenText.toLowerCase().trim();
         
         double similarity = calculateSimilarity(questionText, spokenTextLower);
-        Log.d(TAG, "Similarity: " + similarity);
-
-        String message;
-        if (similarity >= 0.3) {
-            message = "Bạn nói hay! ★★★★★";
-        } else {
-            message = "Cần nói lại.";
-        }
-        showLongToast(message, 30000);
+        String message = (similarity >= 0.3) ? "Bạn nói hay! ★★★★★" : "Cần nói lại.";
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     private double calculateSimilarity(String s1, String s2) {
         String[] words1 = s1.split("\\s+");
         String[] words2 = s2.split("\\s+");
-        
         int matchCount = 0;
         for (String w1 : words1) {
             for (String w2 : words2) {
@@ -161,41 +152,14 @@ public class LessonActivity extends AppCompatActivity {
                 }
             }
         }
-        
         return (double) matchCount / Math.max(words1.length, words2.length);
-    }
-
-    private void showLongToast(String message, int durationMs) {
-        final Toast toast = Toast.makeText(this, message, Toast.LENGTH_LONG);
-        toast.show();
-        
-        if (durationMs > 3500) {
-            new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-                private int totalShown = 3500;
-                @Override
-                public void run() {
-                    if (totalShown < durationMs) {
-                        toast.show();
-                        totalShown += 3500;
-                        new Handler(Looper.getMainLooper()).postDelayed(this, 3500);
-                    }
-                }
-            }, 3500);
-        }
     }
 
     private void startSpeechToText() {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        
-        if (currentLanguage.equals("Chinese")) {
-            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "zh-CN");
-        } else {
-            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
-        }
-        
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, currentLanguage.equals("Chinese") ? "zh-CN" : "en-US");
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Đang nghe...");
-
         try {
             speechResultLauncher.launch(intent);
         } catch (Exception e) {
@@ -266,6 +230,7 @@ public class LessonActivity extends AppCompatActivity {
                     if (isFinishing() || isDestroyed()) return;
                     if (loadingBar != null) loadingBar.setVisibility(View.GONE);
                     btnCheck.setEnabled(true);
+                    tvQuestion.setText("Failed to generate exercises. Check your API Key.");
                 });
             }
         });
@@ -279,7 +244,8 @@ public class LessonActivity extends AppCompatActivity {
         tvQuestion.setText(currentExercise.getQuestion());
         tvFeedback.setVisibility(View.INVISIBLE);
         btnCheck.setText("CHECK");
-        btnCheck.setBackgroundColor(Color.parseColor("#E5E5E5"));
+        btnCheck.setBackgroundColor(ContextCompat.getColor(this, R.color.duolingo_green));
+        btnCheck.setEnabled(true);
         chipGroupAnswer.removeAllViews();
         chipGroupOptions.removeAllViews();
         if (currentExercise.getOptions() != null) {
@@ -323,14 +289,13 @@ public class LessonActivity extends AppCompatActivity {
         tvFeedback.setVisibility(View.VISIBLE);
         if (userAsnwer.toString().trim().equalsIgnoreCase(correctAnswer)) {
             tvFeedback.setText("Chính xác! Làm tốt lắm.");
-            tvFeedback.setTextColor(Color.parseColor("#58CC02"));
-            btnCheck.setBackgroundColor(Color.parseColor("#58CC02"));
+            tvFeedback.setTextColor(ContextCompat.getColor(this, R.color.duolingo_green));
             btnCheck.setText("CONTINUE");
             addXPFirebase(5);
         } else {
             if (!wrongExercises.contains(exerciseList.get(currentIndex))) wrongExercises.add(exerciseList.get(currentIndex));
             tvFeedback.setText("Chưa đúng. Đáp án: " + correctAnswer);
-            tvFeedback.setTextColor(Color.RED);
+            tvFeedback.setTextColor(ContextCompat.getColor(this, R.color.duolingo_red));
         }
     }
 

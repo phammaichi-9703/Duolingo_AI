@@ -2,12 +2,36 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.BTN_Duolingo" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/duolingo_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">#D7FFB7</item>
+        <item name="colorOnPrimaryContainer">#185900</item>
+        
+        <item name="colorSecondary">@color/duolingo_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        
+        <!-- Force light colors even in dark mode for better contrast -->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
     </style>
 
     <style name="Theme.BTN_Duolingo" parent="Base.Theme.BTN_Duolingo" />
 
     <style name="CircleImageView" parent="">
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="DuolingoButton" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Duolingo.MediumComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.Duolingo.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">16dp</item>
     </style>
 </resources>

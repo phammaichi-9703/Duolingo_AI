@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.button.MaterialButton;
 import java.util.List;
@@ -65,20 +66,19 @@ public class ExerciseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
             if (isLocked) {
                 exerciseHolder.btnStart.setText("LOCKED");
-                exerciseHolder.btnStart.setBackgroundColor(Color.GRAY);
-                exerciseHolder.itemView.setAlpha(0.5f);
+                exerciseHolder.btnStart.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.button_disabled));
+                exerciseHolder.btnStart.setTextColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.button_disabled_text));
+                exerciseHolder.itemView.setAlpha(0.6f);
             } else {
                 exerciseHolder.btnStart.setText("START");
-                exerciseHolder.btnStart.setBackgroundColor(Color.parseColor("#58CC02")); // Duolingo green
+                exerciseHolder.btnStart.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.duolingo_green));
+                exerciseHolder.btnStart.setTextColor(Color.WHITE);
                 exerciseHolder.itemView.setAlpha(1.0f);
             }
 
             exerciseHolder.btnStart.setOnClickListener(v -> listener.onExerciseClick(exercise, isLocked));
         } else {
             CustomTopicViewHolder customHolder = (CustomTopicViewHolder) holder;
-            // Chỉ cho phép dùng chủ đề tự chọn nếu bài cuối cùng đã hoàn thành
-            boolean lastLessonCompleted = !lockStatus.get(lockStatus.size() - 1); 
-            // Hoặc có thể cho phép dùng luôn. Theo yêu cầu là "Sau khi hết bài số 5"
             
             customHolder.btnStartCustom.setOnClickListener(v -> {
                 String topic = customHolder.etCustomTopic.getText().toString().trim();
@@ -93,7 +93,6 @@ public class ExerciseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public int getItemCount() {
-        // Thêm 1 cho thẻ Custom Topic
         return exerciseList.size() + 1;
     }
 

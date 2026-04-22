@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/backgroundColor">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarProfile"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/duolingo_green"
-        app:title="Profile"
-        app:titleTextColor="#FFFFFF" />
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
 
-    <ScrollView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarProfile"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Profile"
+            app:titleTextColor="@color/textColorPrimary"
+            app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dividerColor" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,10 +39,12 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/surfaceColor"
-                android:layout_marginBottom="16dp">
+                app:cardElevation="0dp"
+                app:strokeColor="@color/cardStrokeColor"
+                app:strokeWidth="2dp"
+                app:cardBackgroundColor="@color/surfaceColor">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -69,7 +83,7 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="2dp"
                         android:background="@color/dividerColor"
                         android:layout_marginTop="24dp"
                         android:layout_marginBottom="24dp" />
@@ -90,16 +104,17 @@
                                 android:id="@+id/tvProfileXP"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="20sp"
+                                android:text="100"
+                                android:textSize="22sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/duolingo_green"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="XP"
+                                android:text="TOTAL XP"
                                 android:textSize="12sp"
-                                android:textColor="@color/textColorSecondary"/>
+                                android:textStyle="bold"
+                                android:textColor="@color/duolingo_gray"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -112,16 +127,17 @@
                                 android:id="@+id/tvProfileStreak"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="20sp"
+                                android:text="5"
+                                android:textSize="22sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/duolingo_orange"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Day Streak"
+                                android:text="DAY STREAK"
                                 android:textSize="12sp"
-                                android:textColor="@color/textColorSecondary"/>
+                                android:textStyle="bold"
+                                android:textColor="@color/duolingo_gray"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -131,19 +147,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/cardStrokeColor"
+                app:strokeWidth="2dp"
                 app:cardBackgroundColor="@color/surfaceColor">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Personal Details"
+                        android:text="Account Details"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="@color/textColorPrimary"
@@ -153,55 +171,65 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingVertical="8dp">
+                        android:paddingVertical="10dp">
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:text="Birthday:"
+                            android:text="Birthday"
+                            android:textSize="16sp"
                             android:textColor="@color/textColorSecondary"/>
                         <TextView
                             android:id="@+id/tvProfileDOB"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="01/01/2000"
+                            android:textSize="16sp"
                             android:textColor="@color/textColorPrimary"
                             android:textStyle="bold"/>
                     </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingVertical="8dp">
+                        android:paddingVertical="10dp">
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:text="Address:"
+                            android:text="Address"
+                            android:textSize="16sp"
                             android:textColor="@color/textColorSecondary"/>
                         <TextView
                             android:id="@+id/tvProfileAddress"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Hanoi"
+                            android:textSize="16sp"
                             android:textColor="@color/textColorPrimary"
                             android:textStyle="bold"/>
                     </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/dividerColor"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingVertical="8dp">
+                        android:paddingVertical="10dp">
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:text="Phone:"
+                            android:text="Phone"
+                            android:textSize="16sp"
                             android:textColor="@color/textColorSecondary"/>
                         <TextView
                             android:id="@+id/tvProfilePhone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0123456789"
+                            android:textSize="16sp"
                             android:textColor="@color/textColorPrimary"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -210,6 +238,6 @@
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

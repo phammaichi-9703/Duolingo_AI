@@ -12,29 +12,42 @@
         android:layout_height="match_parent"
         android:background="@color/backgroundColor">
 
+        <!-- Toolbar is often handled inside fragments in modern designs, 
+             but if kept here, it should be clean -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/duolingo_green"
+            android:background="@color/white"
+            android:elevation="0dp"
+            android:visibility="gone"
             app:layout_constraintTop_toTopOf="parent"
             app:title="BTN Duolingo"
-            app:titleTextColor="@android:color/white" />
+            app:titleTextColor="@color/textColorPrimary" />
 
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation_divider"
             app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <View
+            android:id="@+id/bottom_navigation_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dividerColor"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/surfaceColor"
-            app:itemIconTint="#58CC02"
-            app:itemTextColor="#58CC02"
+            android:background="@color/white"
+            app:elevation="0dp"
+            app:itemIconTint="@color/duolingo_green"
+            app:itemTextColor="@color/duolingo_green"
+            app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/bottom_nav_menu" />
 

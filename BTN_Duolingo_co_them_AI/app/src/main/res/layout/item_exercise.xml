@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="2dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
     app:cardBackgroundColor="@color/surfaceColor"
     app:strokeColor="@color/cardStrokeColor"
     app:strokeWidth="2dp">
@@ -19,8 +20,8 @@
 
         <ImageView
             android:id="@+id/ivExerciseIcon"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:src="@android:drawable/ic_menu_edit"
             android:contentDescription="Exercise Icon"
             app:tint="@color/duolingo_green" />
@@ -30,7 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="16dp">
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp">
 
             <TextView
                 android:id="@+id/tvExerciseTitle"
@@ -45,19 +47,21 @@
                 android:id="@+id/tvExerciseDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Learn the fundamentals of the language."
+                android:text="Learn basic greetings"
                 android:textSize="14sp"
                 android:textColor="@color/textColorSecondary"/>
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnStart"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
+            style="@style/Widget.Material3.Button.TonalButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="START"
-            android:textColor="@color/duolingo_blue"
-            android:textStyle="bold" />
+            android:textAllCaps="true"
+            android:textColor="@color/duolingo_green"
+            android:textStyle="bold"
+            app:cornerRadius="12dp" />
 
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
