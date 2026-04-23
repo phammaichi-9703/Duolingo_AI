@@ -21,7 +21,7 @@ import java.util.concurrent.Executors;
 
 public class GeminiService {
     private static final String TAG = "GeminiService";
-    private static final String API_KEY = "AIzaSyD2qHhl3BgTLH2OtD3FZAGvwkYrdikcI7M";
+    private static final String API_KEY = "AIzaSyDp1YLCajAeccS9YLuwi-gaXrKKPwwp2a8";
     private final GenerativeModelFutures model;
     private final Executor executor = Executors.newSingleThreadExecutor();
     
@@ -37,8 +37,9 @@ public class GeminiService {
         configBuilder.temperature = 0.1f;
         GenerationConfig config = configBuilder.build();
         
+        // CHỈNH SỬA: Chuyển về gemini-1.5-flash để ổn định và tránh lỗi Quota 0
         GenerativeModel gm = new GenerativeModel(
-            "gemini-2.5-pro",
+            "gemini-3-flash-preview",
             API_KEY,
             config
         );
@@ -62,6 +63,7 @@ public class GeminiService {
             @Override
             public void onSuccess(GenerateContentResponse result) {
                 String resultText = result.getText();
+                Log.d(TAG, "Gemini Response: " + resultText);
                 if (resultText == null || resultText.isEmpty()) {
                     callback.onError(new Exception("AI returned empty text."));
                     return;
@@ -80,12 +82,15 @@ public class GeminiService {
                         callback.onSuccess(cachedExercises);
                     }
                 } catch (Exception e) {
+                    Log.e(TAG, "JSON Parsing error: " + e.getMessage());
                     callback.onError(e);
                 }
             }
 
             @Override
             public void onFailure(Throwable t) {
+                // Log chi tiết lỗi để kiểm tra trong Logcat
+                Log.e(TAG, "Gemini API Error: " + t.getMessage());
                 callback.onError(t);
             }
         }, executor);
