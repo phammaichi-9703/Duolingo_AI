@@ -21,7 +21,7 @@ import java.util.concurrent.Executors;
 
 public class GeminiService {
     private static final String TAG = "GeminiService";
-    private static final String API_KEY = "AIzaSyDp1YLCajAeccS9YLuwi-gaXrKKPwwp2a8";
+    private static final String API_KEY = "AIzaSyBX1zkrwWB2XBOYx4QwgJZo9H_S6Y3SQX8";
     private final GenerativeModelFutures model;
     private final Executor executor = Executors.newSingleThreadExecutor();
     
@@ -37,9 +37,9 @@ public class GeminiService {
         configBuilder.temperature = 0.1f;
         GenerationConfig config = configBuilder.build();
         
-        // CHỈNH SỬA: Chuyển về gemini-1.5-flash để ổn định và tránh lỗi Quota 0
+        // Sử dụng model ổn định gemini-1.5-flash
         GenerativeModel gm = new GenerativeModel(
-            "gemini-3-flash-preview",
+            "gemini-1.5-flash",
             API_KEY,
             config
         );
@@ -54,6 +54,8 @@ public class GeminiService {
                 "question (string, translate English to " + (language.equals("Chinese") ? "Chinese" : "Vietnamese") + "), " +
                 "options (string, 6-8 words/punctuation marks separated by '|'), " +
                 "answer (string, the correct translation). " +
+                "IMPORTANT: In the 'answer' field, always put a space BEFORE punctuation marks. " +
+                "Example: 'Một con mèo có bốn chân .' (Note the space before the dot). " +
                 "Output ONLY raw JSON starting with [ and ending with ].";
 
         Content content = new Content.Builder().addText(prompt).build();
@@ -89,7 +91,6 @@ public class GeminiService {
 
             @Override
             public void onFailure(Throwable t) {
-                // Log chi tiết lỗi để kiểm tra trong Logcat
                 Log.e(TAG, "Gemini API Error: " + t.getMessage());
                 callback.onError(t);
             }
